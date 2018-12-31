@@ -1,0 +1,17 @@
+version: '2.4'
+
+services:
+  postgres:
+    image: postgres:10.4-alpine
+  django:
+    init: true
+    build:
+      context: .
+      dockerfile: ./docker/django/Dockerfile
+    depends_on:
+      - postgres
+    env_file: ./.docker-env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app

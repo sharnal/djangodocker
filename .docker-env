@@ -1,0 +1,5 @@
+POSTGRES_DB=mydb
+POSTGRES_PASSWORD=entersys
+POSTGRES_USER=sharnal
+DATABASE_URL=postgres://sharnal:entersys@postgres:5432/mydb
+SECRET_KEY=secretkey
